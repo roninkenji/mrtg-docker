@@ -3,5 +3,7 @@ MAINTAINER roninkenji
 
 RUN apk add --update mrtg && rm -rf /var/cach/apk/*
 
-# ENTRYPOINT /usr/local/bin/init.sh
+COPY myinit.sh /usr/local/bin
+
+ENTRYPOINT /usr/local/bin/myinit.sh
 
